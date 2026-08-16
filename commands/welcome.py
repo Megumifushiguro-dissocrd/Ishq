@@ -5,7 +5,7 @@ class Welcome(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         # Replace with your actual Welcome Channel ID
-        self.welcome_channel_id = 123456789012345678 
+        self.welcome_channel_id = 1538197351368491088
         
         # Local file path or container storage path
         self.image_path = "/storage/emulated/0/Pictures/file_0000000076dc8208bd451dca2dd4a5b1.png"

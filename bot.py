@@ -29,6 +29,14 @@ async def on_ready():
     print(f"Logged in as: {bot.user.name} (ID: {bot.user.id})")
     print("Main file: bot.py initialized successfully.")
     print("Loading commands from 'commands/' directory...")
+
+    # Sync slash commands with Discord
+    try:
+        synced = await bot.tree.sync()
+        print(f"Synced {len(synced)} Slash Commands.")
+    except Exception as e:
+        print(f"Failed to sync slash commands: {e}")
+        
     print("=" * 50)
 
     # Start presence rotation loop
